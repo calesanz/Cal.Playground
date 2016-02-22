@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:Cal.Playground.Views;assembly=Cal.Playground" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Cal.Playground.Views.TestPage">
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Clicked="doPrev" Text="Prev" />
+				<Button Clicked="doNext" Text="Next" />
+			</StackLayout>
+			<local:MultiView x:Name="multiView">
+				<local:MultiView.SubViews>
+					<ContentView BackgroundColor="Red">
+						<Label Text="View1" />
+					</ContentView>
+					<ContentView BackgroundColor="Blue">
+						<Label Text="View2" />
+					</ContentView>
+					<ContentView BackgroundColor="Green">
+						<Label Text="View3" />
+					</ContentView>
+					<ContentView BackgroundColor="Yellow">
+						<Label Text="View4" />
+					</ContentView>
+				</local:MultiView.SubViews>
+			</local:MultiView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
